@@ -87,7 +87,8 @@ func newDeckFromFile(filename string) deck {
 }
 
 // In this case, d is the same as (*d)
-// shuffle by swapping 2 elements by its index
+// because Slices in Golang are Reference Type
+// Shuffle by swapping 2 elements by its index
 // randomize index in range [0, len(d)-1] >> [0, 51] for full deck
 // do len(d) times >> 52 times for full deck
 func (d *deck) shuffle() {
